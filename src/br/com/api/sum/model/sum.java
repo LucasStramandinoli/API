@@ -22,8 +22,8 @@ public class sum {
 	public void setValue2(int value2) {
 		this.value2 = value2;
 	}
-
 	
+
 	public int Total() {
 		return value1+value2;
 	}
