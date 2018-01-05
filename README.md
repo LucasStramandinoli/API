@@ -4,4 +4,4 @@
 - Multiply
 - Division
 
--jenkins test
+-jenkins test auto deploy
