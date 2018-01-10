@@ -4,4 +4,4 @@
 - Multiply
 - Division
 
--jenkins test auto deploy
+-jenkins test auto deploy on staging branch only (deploy to staging environment)
