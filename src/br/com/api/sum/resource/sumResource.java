@@ -9,10 +9,10 @@ import com.thoughtworks.xstream.XStream;
 @Path("sum")
 public class sumResource {
 	
-	@Path("{value1}")
+	@Path("{value1}/{value2}")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public String Soma(@PathParam("value1") int value1, @PathParam("value1") int value2) {
+	public String Soma(@PathParam("value1") int value1, @PathParam("value2") int value2) {
 		sum sum = new sum(value1, value2);
 		return new XStream().toXML( sum.Total());		
 	}

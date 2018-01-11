@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>This API will SUM value1 and value2</h1>
+	<form>
+	 First value:
+	 <input type="number" id="firstvalue" name="firstvalue" value="1">
+	 <br>
+	 Second value:
+	 <input type="number" id="secondvalue" name="secondvalue" value="4">
+	 <br><br>
+	 <input type="button" value="Sum!" onclick="httpGet()">
+	</form> 
+	
+	<br>
+	Result:	 <p id="result"><p>
+</body>
+</html>
+
+<script>
+function httpGet()
+{
+	var value1 = document.getElementById("firstvalue").value;
+	var value2 = document.getElementById("secondvalue").value;
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://localhost:8080/API-SUM/sum/" + value1 + "/" + value2, false ); // false for synchronous request
+    xmlHttp.send( null );
+    document.getElementById("result").innerHTML = xmlHttp.responseText;
+}
+
+</script>
